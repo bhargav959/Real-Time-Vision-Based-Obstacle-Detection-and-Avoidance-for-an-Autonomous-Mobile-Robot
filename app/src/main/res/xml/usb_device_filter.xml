@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Generic filter: the app probes supported USB serial devices at runtime. -->
+</resources>

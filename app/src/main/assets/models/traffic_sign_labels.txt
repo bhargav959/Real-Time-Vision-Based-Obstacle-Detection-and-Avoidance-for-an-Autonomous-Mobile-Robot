@@ -1,0 +1,7 @@
+compulsory_right
+no_stopping_or_parking
+right_turn_prohibited
+right_reverse_bend
+side_road_right
+stop
+turn_right

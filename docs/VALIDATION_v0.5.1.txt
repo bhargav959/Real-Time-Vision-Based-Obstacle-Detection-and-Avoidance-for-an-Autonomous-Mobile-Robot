@@ -1,0 +1,27 @@
+Robot Car AI — v0.5.1 validation summary
+
+Environment validation:
+- Core Kotlin navigation layer compiled with kotlinc/JVM.
+- Geometry scenario checks passed.
+- Unknown-only mask is rejected as non-drivable.
+- Exact 15 cm physical gap case is accepted without adding the 10 cm boundary margin.
+- 12 cm gap case is rejected and expanded-boundary side avoidance is selected.
+- No-feasible-route case resolves to STOP.
+- Clear path resolves to FORWARD at 150 PWM.
+- Ultrasonic <25 cm veto resolves to STOP.
+- Speed controller reduces speed for curve/boundary/obstacle/ultrasonic conditions.
+- Android XML manifest/layout parse successfully.
+- Virtual MP4 verified: H.264/AVC, 1280x720, 30 FPS, 24 seconds, YUV420p.
+
+Not validated in this packaging environment:
+- Complete Android Gradle build against a physical Android device.
+- Runtime ONNX/TFLite inference on the target phone.
+- Exact centimetre calibration of the real camera mount.
+- Physical motor polarity and drivetrain behavior.
+
+Before autonomous motion:
+1. Verify ENA=D9 and ENB=D10 PWM with both L298N jumpers removed.
+2. Verify IN1=D2, IN2=D3, IN3=D4, IN4=D5, HC-SR04 TRIG=D6, ECHO=D7.
+3. Run the robot with wheels lifted and test F/SL/SR/L/R/S.
+4. Calibrate camera ground projection using known 30/50/70 cm floor distances.
+5. Test at low PWM on a closed course before increasing speed.

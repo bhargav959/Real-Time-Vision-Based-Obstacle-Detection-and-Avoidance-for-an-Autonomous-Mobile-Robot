@@ -1,0 +1,35 @@
+{
+  "release": "0.5.17-best-pt-tflite",
+  "source_checkpoint": "best.pt.zip",
+  "source_checkpoint_sha256": "670a97fdad5504960d1e3e1b2b47977096299316b499e886100818532ded2a0b",
+  "tflite_asset": "app/src/main/assets/models/traffic_sign.tflite",
+  "tflite_sha256": "a5d137dbf8c50d25c913c579068b925554238ff373b4a5369af8bbb043217b47",
+  "tflite_size_bytes": 12769784,
+  "input_shape": [
+    1,
+    3,
+    640,
+    640
+  ],
+  "input_dtype": "float32",
+  "output_shape": [
+    1,
+    11,
+    8400
+  ],
+  "output_dtype": "float32",
+  "labels": [
+    "compulsory_right",
+    "no_stopping_or_parking",
+    "right_turn_prohibited",
+    "right_reverse_bend",
+    "side_road_right",
+    "stop",
+    "turn_right"
+  ],
+  "class_count": 7,
+  "export": "Ultralytics YOLO export format=tflite, imgsz=640, batch=1, nms=False, int8=False, half=False",
+  "limitations": [
+    "Conversion and tensor signature validated; this does not establish detection accuracy on real images or performance on the target Android phone."
+  ]
+}
